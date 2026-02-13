@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Visitenkarte</title>
     <style>
-        /* Grunddesign */
+        /* Grunddesign mit Farbverlauf */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f4f5;
+            
+            /* HIER IST DER NEUE FARBVERLAUF (Blau -> Türkis -> Lila) */
+            background: linear-gradient(135deg, #0052D4, #40E0D0, #9D50BB);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite; /* Optional: Macht den Verlauf leicht bewegt/lebendig */
+            
             color: #333;
             display: flex;
             justify-content: center;
@@ -18,14 +23,17 @@
             padding: 20px;
         }
 
-        /* Die Karte selbst */
+        /* Damit der Hintergrund immer voll deckt */
+        html { height: 100%; }
+
+        /* Die Karte selbst (Weißer Kasten bleibt unverändert) */
         .container {
             background: white;
             width: 100%;
             max-width: 400px;
             padding: 40px 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Etwas mehr Schatten für besseren Kontrast zum bunten Hintergrund */
             text-align: center;
         }
 
@@ -36,7 +44,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            border: 3px solid white;
+            border: 4px solid white; /* Weißer Rand */
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
@@ -56,19 +64,19 @@
             text-decoration: none;
             font-weight: 600;
             transition: transform 0.2s ease;
-            box-sizing: border-box; /* Wichtig für Padding */
+            box-sizing: border-box; 
         }
 
         .btn:active { transform: scale(0.98); }
 
-        /* Haupt-Button (Kontakt speichern) */
+        /* Haupt-Button (Schwarz) */
         .btn-primary {
-            background-color: #000; /* Schwarz für edlen Look */
+            background-color: #000; 
             color: white;
             border: 2px solid #000;
         }
 
-        /* Sekundäre Buttons (Social Media) */
+        /* Sekundäre Buttons (Weiß/Grau) */
         .btn-secondary {
             background-color: #fff;
             color: #333;
@@ -77,7 +85,7 @@
         
         .btn-secondary:hover { background-color: #f9fafb; border-color: #d1d5db; }
 
-        /* Icons (Emojis) */
+        /* Icons */
         .icon { margin-right: 10px; font-size: 1.2rem; }
 
     </style>
@@ -87,7 +95,8 @@
     <div class="container">
         <img src="profilbild.jpg" alt="Profilbild" class="profile-pic">
         
-        <h1>Luis Frank</h1>
+        <h1>Luis F-E</h1>
+        <p>Dein Untertitel hier</p>
 
         <a href="Kontakt.vcf" class="btn btn-primary">
             <span class="icon">👤</span> Kontakt speichern
@@ -95,15 +104,15 @@
 
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
-        <a href="mailto:vamos@luisfrank.de" class="btn btn-secondary">
+        <a href="mailto:deine-email@beispiel.de" class="btn btn-secondary">
             <span class="icon">✉️</span> Email schreiben
         </a>
 
-        <a href="https://luisfrank.de" target="_blank" class="btn btn-secondary">
-            <span class="icon">🌐</span> Webseite
+        <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
+            <span class="icon">💼</span> LinkedIn
         </a>
-        
-        <a href="https://www.instagram.com/luisf7265?igsh=N29jdHVyajNhdzV5" target="_blank" class="btn btn-secondary">
+
+        <a href="https://instagram.com" target="_blank" class="btn btn-secondary">
             <span class="icon">📸</span> Instagram
         </a>
 
