@@ -6,7 +6,7 @@
     <title>Meine Visitenkarte</title>
     <style>
         /* Grunddesign mit Farbverlauf */
-               body {
+                       body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             
             /* Farbverlauf: Blau -> Türkis -> Lila */
@@ -21,6 +21,19 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+        }
+
+        /* Das hier hat gefehlt: Die Bewegungs-Anweisung */
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         /* Das hier hat gefehlt: Die Bewegungs-Anweisung */
@@ -125,9 +138,9 @@
     <span class="icon">🌐</span> Website öffnen
 </a>
 
-        <a href="https://www.instagram.com/luisf7265?igsh=N29jdHVyajNhdzV5" target="_blank" class="btn btn-secondary">
-            <span class="icon">📸</span> Instagram
-        </a>
+        <a href="instagram://user?username=luisf7265" class="btn btn-secondary">
+    <span class="icon">📸</span> Instagram
+</a>
 
     </div>
 
