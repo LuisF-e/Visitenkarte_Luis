@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//GitHub-Contact//DE
+N:Frank;Luis;;;
+FN:Luis Frank 
+TEL;type=CELL;type=VOICE:+34 684 70 70 24
+EMAIL;type=INTERNET;type=WORK:vamos@luisfrank.de
+URL;type=WORK:https://luisfrank.de
+END:VCARD
